@@ -1,0 +1,12 @@
+suite_namespace: frontend\tests\acceptance
+actor: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+              url: 'http://balancer:1111'
+              curl:
+                  CURLOPT_RETURNTRANSFER: true
+        - Yii2:
+            part: [init, orm, fixtures ] # allow to use AR methods
+            cleanup: true
+            entryScript: 'index-test.php'
