@@ -48,6 +48,7 @@ class FeedbackController extends Controller
                         'success',
                         Yii::t('feedback','Your message successfully sent!')
                     );
+                    $model = new Feedback(['scenario' => 'send']);
                 } else {
                     Yii::$app->session->setFlash(
                         'error',
