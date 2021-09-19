@@ -3,7 +3,7 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-              url: 'http://balancer:1111'
+              url: 'http://balancer:8888'
               curl:
                   CURLOPT_RETURNTRANSFER: true
         - Yii2:
